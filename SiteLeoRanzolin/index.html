@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clube de Desbravadores Léo Ranzoolin - Aventura, Descoberta e Propósito">
+    <title>Desbravadores Léo Ranzoolin</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="images/logo.png" alt="Logo Léo Ranzoolin" class="logo-img">
+                </div>
+                <span>Desbravadores Léo Ranzoolin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#junte-se">Junte-se a Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/foto1.jpg" alt="Desbravadores Léo Ranzoolin em atividade">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/foto2.jpg" alt="Grupo de Desbravadores">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/foto3.jpg" alt="Desbravadores em acampamento">
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
+            <div class="carousel-indicators">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Desbravadores Léo Ranzoolin:<br>Aventura, Descoberta, Propósito</h1>
+            <p>Formando jovens com caráter e valores eternos</p>
+            <a href="#quem-somos" class="btn-hero">Conheça Nossas Aventuras</a>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="info-card">
+                <div class="info-card-icon">🔥</div>
+                <h3>Quem Somos</h3>
+                <p>Explore nossos valores e missão</p>
+                <a href="#quem-somos" class="btn-card">Saiba Mais</a>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🎯</div>
+                <h3>Atividades</h3>
+                <p>Acampamentos, habilidades, comunidade</p>
+                <a href="#atividades" class="btn-card">Saiba Mais</a>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🤝</div>
+                <h3>Junte-se a Nós</h3>
+                <p>Faça novas amizades e viva experiências</p>
+                <a href="#junte-se" class="btn-card">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias" class="noticias-section">
+        <h2>Últimas Notícias</h2>
+        <div class="noticias-grid">
+            <div class="noticia-card">
+                <div class="noticia-imagem">🧗</div>
+                <div class="noticia-conteudo">
+                    <h3>Treinamento de Rapel</h3>
+                    <p class="noticia-data">Dezembro 15, 2024</p>
+                    <p>Desbravadores participaram de emocionante treinamento de rapel, desenvolvendo coragem e técnicas de escalada.</p>
+                </div>
+            </div>
+            <div class="noticia-card">
+                <div class="noticia-imagem">🌱</div>
+                <div class="noticia-conteudo">
+                    <h3>Ação Ambiental</h3>
+                    <p class="noticia-data">Dezembro 03, 2024</p>
+                    <p>Plantio de mudas e limpeza de trilhas em projeto de preservação ambiental da comunidade.</p>
+                </div>
+            </div>
+            <div class="noticia-card">
+                <div class="noticia-imagem">⭐</div>
+                <div class="noticia-conteudo">
+                    <h3>Noite de Astronomia</h3>
+                    <p class="noticia-data">Novembro 28, 2024</p>
+                    <p>Observação de estrelas e estudo sobre constelações em acampamento especial noturno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-info">
+                <h2>Newsletter</h2>
+                <div class="info-item">📍 Endereço: Rua Example, 123 - Curitiba/PR</div>
+                <div class="info-item">📞 Telefone: (41) 3333-4444 / (41) 99999-8888</div>
+                <div class="info-item">⏰ Reuniões: Sábados às 15h00</div>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                    <a href="#" class="social-icon" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="newsletter-form">
+                <h3>Newsletter</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Inscreva-se para receber nossas novidades</p>
+                <form id="newsletterForm" class="email-input">
+                    <input type="email" id="emailInput" placeholder="Seu email" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Desbravadores Léo Ranzoolin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
