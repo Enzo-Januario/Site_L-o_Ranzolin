@@ -68,6 +68,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -82,6 +83,97 @@ nav {
 
 .nav-links a:hover {
     opacity: 0.7;
+}
+
+/* ============================================
+   MENU DROPDOWN
+   ============================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Área invisível de conexão entre o menu e o dropdown */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background: transparent;
+    display: none;
+}
+
+.dropdown:hover::after {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 14px 18px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: #f8f9fa;
+    border-left-color: #c41e3a;
+    padding-left: 22px;
+    opacity: 1;
+}
+
+.dropdown-content a.active {
+    background: #fff5e6;
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+/* Mantém o dropdown aberto quando o mouse está sobre ele */
+.dropdown-content:hover {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================
@@ -487,8 +579,8 @@ nav {
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: rgba(255,255,255,0.1);
     border-radius: 50%;
     display: flex;
@@ -497,11 +589,41 @@ nav {
     color: white;
     text-decoration: none;
     transition: all 0.3s;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s;
+}
+
+.social-icon span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
 
 .social-icon:hover {
     background: #c41e3a;
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.1);
+    border-color: #c41e3a;
+}
+
+.social-icon:hover img {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
+.social-icon:hover span {
+    color: white;
+}
+
+.social-icon.social-icon-emoji span {
+    font-size: 1.8rem;
 }
 
 /* ============================================
@@ -565,6 +687,12 @@ footer {
 
     .carousel-control.next {
         right: 1rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 0;
     }
 }
 
