@@ -1,0 +1,434 @@
+/* ============================================
+   CSS ESPECÍFICO DA PÁGINA DE CONTATO
+   ============================================ */
+
+/* Seção do Mapa */
+.mapa-section {
+    position: relative;
+    height: 450px;
+    margin-top: 80px;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+}
+
+.mapa-container:hover iframe {
+    filter: grayscale(0%);
+}
+
+.mapa-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.local-badge {
+    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 20px rgba(196, 30, 58, 0.4);
+}
+
+.local-icon {
+    font-size: 1.2rem;
+}
+
+/* Seção de Contato */
+.contato-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 5rem 2rem;
+}
+
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Formulário */
+.contato-form-wrapper {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.contato-form-wrapper h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contato-form-wrapper h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #c41e3a 0%, #ffc107 100%);
+    border-radius: 2px;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: #fafafa;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+    outline: none;
+    border-color: #c41e3a;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.1);
+}
+
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.3s;
+    background: #fafafa;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c41e3a;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.1);
+}
+
+.btn-enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(196, 30, 58, 0.4);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.btn-enviar:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Card de Informações */
+.contato-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card-contato {
+    background: linear-gradient(135deg, #1a2840 0%, #2d4563 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 40px rgba(26, 40, 64, 0.3);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.club-logo-small {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.club-logo-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-header h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item-contato {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.info-text strong {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    color: #ffc107;
+}
+
+.info-text p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Redes Sociais */
+.social-contato {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-contato span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.social-icons-contato {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.social-btn:hover {
+    background: #c41e3a;
+    transform: translateY(-3px);
+}
+
+/* Botão Google Maps */
+.btn-maps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-maps:hover {
+    border-color: #c41e3a;
+    color: #c41e3a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.maps-icon {
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 1024px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .mapa-section {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mapa-section {
+        height: 300px;
+        margin-top: 70px;
+    }
+    
+    .local-badge {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .contato-section {
+        padding: 3rem 1rem;
+    }
+    
+    .contato-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contato-form-wrapper h2 {
+        font-size: 1.6rem;
+    }
+    
+    .info-card-contato {
+        padding: 2rem 1.5rem;
+    }
+    
+    .info-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-contato {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .mapa-section {
+        height: 250px;
+        margin-top: 60px;
+    }
+    
+    .contato-form-wrapper h2 {
+        font-size: 1.4rem;
+    }
+    
+    .input-wrapper input,
+    .input-wrapper select {
+        padding: 0.9rem 2.5rem 0.9rem 0.9rem;
+    }
+    
+    .btn-enviar {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,467 @@
+/* ============================================
+   CSS ESPECÍFICO DA PÁGINA DE AGENDA
+   ============================================ */
+
+/* Banner */
+.agenda-banner {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(135deg, #1a2840 0%, #2d4563 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.agenda-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/foto1.jpg') center/cover;
+    opacity: 0.15;
+}
+
+.agenda-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 40, 64, 0.95) 0%, rgba(45, 69, 99, 0.9) 100%);
+}
+
+.agenda-banner .banner-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+.agenda-banner .banner-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.agenda-banner .banner-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+.agenda-banner .banner-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #c41e3a 0%, #ffc107 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Página principal */
+.agenda-page {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.agenda-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+}
+
+/* Calendário */
+.calendario-wrapper {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.calendario-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.nav-mes {
+    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-mes:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.4);
+}
+
+/* Dias da semana */
+.calendario-dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.calendario-dias-semana span {
+    text-align: center;
+    font-weight: 700;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+.calendario-dias-semana span:first-child {
+    color: #c41e3a;
+}
+
+/* Grid do calendário */
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.dia {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    background: #f8f9fa;
+    font-weight: 500;
+}
+
+.dia:hover {
+    background: #e9ecef;
+    transform: scale(1.05);
+}
+
+.dia.outro-mes {
+    color: #ccc;
+    background: transparent;
+}
+
+.dia.hoje {
+    background: linear-gradient(135deg, #1a2840 0%, #2d4563 100%);
+    color: white;
+    font-weight: 700;
+}
+
+.dia.domingo {
+    color: #c41e3a;
+}
+
+.dia.domingo.hoje {
+    color: white;
+}
+
+.dia.selecionado {
+    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.4);
+}
+
+/* Indicadores de evento */
+.dia .evento-indicador {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    gap: 3px;
+}
+
+.dia .evento-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.dia .evento-dot.reuniao {
+    background: #4CAF50;
+}
+
+.dia .evento-dot.acampamento {
+    background: #FF9800;
+}
+
+.dia .evento-dot.evento {
+    background: #9C27B0;
+}
+
+.dia .evento-dot.campori {
+    background: #c41e3a;
+}
+
+/* Legenda */
+.legenda {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.legenda h4 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.legenda-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.legenda-cor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.legenda-cor.reuniao {
+    background: #4CAF50;
+}
+
+.legenda-cor.acampamento {
+    background: #FF9800;
+}
+
+.legenda-cor.evento {
+    background: #9C27B0;
+}
+
+.legenda-cor.campori {
+    background: #c41e3a;
+}
+
+/* Lista de eventos */
+.eventos-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.eventos-wrapper h3 {
+    font-size: 1.5rem;
+    color: #333;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #f0f0f0;
+}
+
+.eventos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.evento-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #4CAF50;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.evento-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.evento-item.acampamento {
+    border-left-color: #FF9800;
+}
+
+.evento-item.evento {
+    border-left-color: #9C27B0;
+}
+
+.evento-item.campori {
+    border-left-color: #c41e3a;
+}
+
+.evento-item .evento-data {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.evento-item .evento-titulo {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Detalhe do evento */
+.evento-detalhe {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+.evento-detalhe h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.evento-detalhe p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.evento-detalhe .detalhe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.evento-detalhe .detalhe-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.evento-detalhe .detalhe-icon {
+    font-size: 1.2rem;
+}
+
+.evento-detalhe .detalhe-label {
+    color: #888;
+    min-width: 80px;
+}
+
+.evento-detalhe .detalhe-valor {
+    color: #333;
+    font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 1024px) {
+    .agenda-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .eventos-lista {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .agenda-banner {
+        height: 250px;
+        margin-top: 70px;
+    }
+    
+    .agenda-banner .banner-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .agenda-page {
+        padding: 2rem 1rem;
+    }
+    
+    .calendario-wrapper {
+        padding: 1.5rem 1rem;
+    }
+    
+    .calendario-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-mes {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .calendario-dias-semana span {
+        font-size: 0.75rem;
+    }
+    
+    .dia {
+        font-size: 0.9rem;
+    }
+    
+    .legenda-items {
+        gap: 1rem;
+    }
+    
+    .legenda-item {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .agenda-banner {
+        height: 200px;
+        margin-top: 60px;
+    }
+    
+    .agenda-banner .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .calendario-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .dia {
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+    
+    .dia .evento-dot {
+        width: 4px;
+        height: 4px;
+    }
+}

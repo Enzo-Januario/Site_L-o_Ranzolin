@@ -1,0 +1,451 @@
+/* ============================================
+   CSS ESPECÍFICO PARA PÁGINA DE DETALHE DA UNIDADE
+   ============================================ */
+
+/* Banner da Unidade */
+.unidade-detalhe-banner {
+    position: relative;
+    height: 350px;
+    margin-top: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unidade-detalhe-banner .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1a2840 0%, #2d4563 50%, var(--cor-unidade, #c41e3a) 100%);
+    opacity: 0.95;
+}
+
+.unidade-detalhe-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/foto2.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.banner-content-unidade {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+.unidade-titulo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.unidade-subtitulo {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+
+.unidade-detalhe-banner h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 800;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.unidade-lema-banner {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+/* Conteúdo Principal */
+.unidade-detalhe-content {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.unidade-detalhe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Card Principal */
+.unidade-card-principal {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.unidade-logo-grande {
+    width: 100%;
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 3px solid #f0f0f0;
+}
+
+.unidade-logo-grande img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.unidade-info-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Atributos Grid */
+.atributos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.atributo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.atributo-label {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.atributo-valor {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cor-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Grito de Guerra */
+.grito-guerra {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #c41e3a;
+}
+
+.grito-guerra p {
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Seção de Membros */
+.unidade-membros-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.unidade-membros-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #f0f0f0;
+}
+
+.membros-por-ano {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ano-grupo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.ano-badge {
+    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.membros-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding-top: 0.3rem;
+}
+
+.membro-nome {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    color: #555;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.membro-nome:hover {
+    background: #e9ecef;
+    border-color: #c41e3a;
+    color: #c41e3a;
+}
+
+/* Seção Símbolo */
+.unidade-simbolo-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.unidade-simbolo-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #f0f0f0;
+}
+
+.simbolo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.simbolo-intro h3 {
+    font-size: 1.3rem;
+    color: #c41e3a;
+    margin-bottom: 1rem;
+}
+
+.simbolo-intro p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.simbolo-detalhes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.detalhe-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.detalhe-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #c41e3a;
+}
+
+.detalhe-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detalhe-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.detalhe-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c41e3a;
+    font-weight: bold;
+}
+
+.lema-destaque {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+}
+
+.lema-ref {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Botão Voltar */
+.voltar-section {
+    text-align: center;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-voltar:hover {
+    border-color: #c41e3a;
+    color: #c41e3a;
+    transform: translateX(-5px);
+}
+
+.btn-voltar span:first-child {
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.btn-voltar:hover span:first-child {
+    transform: translateX(-5px);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 1024px) {
+    .unidade-card-principal {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .unidade-logo-grande {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .simbolo-detalhes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .unidade-detalhe-banner {
+        height: 280px;
+        margin-top: 70px;
+    }
+    
+    .unidade-detalhe-banner h1 {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+    
+    .unidade-subtitulo {
+        font-size: 1rem;
+    }
+    
+    .unidade-lema-banner {
+        font-size: 1.1rem;
+    }
+    
+    .unidade-detalhe-content {
+        padding: 2rem 1rem;
+    }
+    
+    .unidade-card-principal {
+        padding: 2rem 1.5rem;
+    }
+    
+    .atributos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .unidade-membros-section,
+    .unidade-simbolo-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .ano-grupo {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unidade-detalhe-banner {
+        height: 250px;
+        margin-top: 60px;
+    }
+    
+    .unidade-detalhe-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .unidade-logo-grande {
+        max-width: 180px;
+        padding: 1.5rem;
+    }
+    
+    .info-section h3 {
+        font-size: 1.1rem;
+    }
+}

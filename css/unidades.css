@@ -1,0 +1,252 @@
+/* ============================================
+   CSS ESPECÍFICO DA PÁGINA DE UNIDADES
+   ============================================ */
+
+/* Banner da página */
+.unidades-banner {
+    position: relative;
+    height: 350px;
+    background: linear-gradient(135deg, #1a2840 0%, #2d4563 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.unidades-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/foto2.jpg') center/cover;
+    opacity: 0.15;
+}
+
+.unidades-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 40, 64, 0.95) 0%, rgba(45, 69, 99, 0.9) 100%);
+}
+
+.unidades-banner .banner-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+.unidades-banner .banner-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.unidades-banner .banner-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.unidades-banner .banner-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #c41e3a 0%, #ffc107 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Seção principal */
+.unidades-page {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 5rem 2rem;
+    min-height: 60vh;
+}
+
+.unidades-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Grid de unidades */
+.unidades-page-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+/* Card de unidade */
+.unidade-page-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border: 2px solid transparent;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.unidade-page-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c41e3a 0%, #ffc107 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.unidade-page-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(196, 30, 58, 0.2);
+    border-color: #c41e3a;
+}
+
+.unidade-page-card:hover::before {
+    opacity: 1;
+}
+
+/* Logo da unidade */
+.unidade-page-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #e0e0e0;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.unidade-page-card:hover .unidade-page-logo {
+    border-color: #c41e3a;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
+}
+
+.unidade-page-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.unidade-page-card:hover .unidade-page-logo img {
+    transform: scale(1.1);
+}
+
+/* Info da unidade */
+.unidade-page-info h3 {
+    font-size: 1.4rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.unidade-page-card:hover .unidade-page-info h3 {
+    color: #c41e3a;
+}
+
+.unidade-lema {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 1200px) {
+    .unidades-page-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .unidades-banner {
+        height: 280px;
+        margin-top: 70px;
+    }
+    
+    .unidades-banner .banner-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .unidades-banner .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .unidades-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .unidade-page-logo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 600px) {
+    .unidades-banner {
+        height: 250px;
+        margin-top: 60px;
+    }
+    
+    .unidades-banner .banner-content h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .unidades-page {
+        padding: 3rem 1rem;
+    }
+    
+    .unidades-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .unidade-page-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .unidade-page-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .unidade-page-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .unidade-lema {
+        font-size: 0.8rem;
+    }
+}

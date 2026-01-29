@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clube de Desbravadores Léo Ranzolin - Aventura, Descoberta e Propósito">
+    <title>Desbravadores Léo Ranzolin</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="images/logo.png" alt="Logo Léo Ranzolin" class="logo-img">
+                </div>
+                <span>Desbravadores Léo Ranzolin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Nosso Clube ▼</a>
+                    <div class="dropdown-content">
+                        <a href="quem-somos.html">Nossa História</a>
+                        <a href="hino.html">Hino do Clube</a>
+                        <a href="unidades.html">Unidades</a>
+                    </div>
+                </li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/foto1.jpg" alt="Desbravadores Léo Ranzolin em atividade">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/foto2.jpg" alt="Grupo de Desbravadores">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/foto3.jpg" alt="Desbravadores em acampamento">
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
+            <div class="carousel-indicators">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Desbravadores Léo Ranzolin:<br>Aventura, Descoberta, Propósito</h1>
+            <p>Formando jovens com caráter e valores eternos</p>
+            <a href="#quem-somos" class="btn-hero">Conheça Nossas Aventuras</a>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="info-card">
+                <div class="info-card-icon">🔥</div>
+                <h3>Quem Somos</h3>
+                <p>Explore nossos valores e missão</p>
+                <a href="quem-somos.html" class="btn-card">Saiba Mais</a>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">📅</div>
+                <h3>Agenda</h3>
+                <p>Calendário de eventos e atividades</p>
+                <a href="agenda.html" class="btn-card">Saiba Mais</a>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">📰</div>
+                <h3>Notícias</h3>
+                <p>Fique por dentro dos eventos e novidades</p>
+                <a href="noticias.html" class="btn-card">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias" class="noticias-section">
+        <h2>Últimas Notícias</h2>
+        <div class="noticias-grid">
+            <div class="noticia-card">
+                <div class="noticia-imagem-foto">
+                    <img src="images/acampamento.png" alt="Acampamento de Conselheiros">
+                </div>
+                <div class="noticia-conteudo">
+                    <h3>Acampamento de Conselheiros</h3>
+                    <p class="noticia-data">Outubro 11, 2025</p>
+                    <p>Desbravadores e Conselheiros participaram de um acampamento para os Desbravadores que irão se tornar conselheiros em 2026.</p>
+                </div>
+            </div>
+            <div class="noticia-card">
+                <div class="noticia-imagem-foto">
+                    <img src="images/Classes.png" alt="Entrega de Classes">
+                </div>
+                <div class="noticia-conteudo">
+                    <h3>Entrega de Classes</h3>
+                    <p class="noticia-data">Outubro 25, 2025</p>
+                    <p>Entrega das classes e especialidades para os desbravadores que completaram e fizeram o cartão e os requisitos da classe durante o ano.</p>
+                </div>
+            </div>
+            <div class="noticia-card">
+                <div class="noticia-imagem-foto">
+                    <img src="images/logo-campori.png" alt="Campori Valentes">
+                </div>
+                <div class="noticia-conteudo">
+                    <h3>Campori Valentes</h3>
+                    <p class="noticia-data">Novembro 20, 2025</p>
+                    <p>Está chegando o campori da ASP de 2025, cujo tema será valentes, não perca essa oportunidade de fazer boas lembranças com o clube.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destaques" class="destaques-section">
+        <h2>Destaques</h2>
+        <div class="destaques-grid">
+            <div class="destaque-card">
+                <div class="destaque-imagem">
+                    <img src="images/nos-e-amarras.png" alt="Nós e Amarras">
+                </div>
+                <h3>Nós e Amarras</h3>
+            </div>
+            <div class="destaque-card">
+                <div class="destaque-imagem">
+                    <img src="images/manualdeespicialidades.png" alt="Manual de Especialidades">
+                </div>
+                <h3>Manual de Especialidades</h3>
+            </div>
+            <div class="destaque-card">
+                <div class="destaque-imagem">
+                    <img src="images/omd.png" alt="OMD - Orientação do Ministério de Desbravadores">
+                </div>
+                <h3>OMD</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="unidades" class="unidades-section">
+        <h2>🛡️ Unidades</h2>
+        <div class="unidades-grid">
+            <a href="unidade-feliz.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-feliz.png" alt="Unidade Feliz">
+                </div>
+                <h3>Feliz</h3>
+            </a>
+            <a href="unidade-coyote.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-coyote.png" alt="Unidade Coyote">
+                </div>
+                <h3>Coyote</h3>
+            </a>
+            <a href="unidade-touro.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-touro.png" alt="Unidade Touro">
+                </div>
+                <h3>Touro</h3>
+            </a>
+            <a href="unidade-tubarao.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-tubarao.png" alt="Unidade Tubarão">
+                </div>
+                <h3>Tubarão</h3>
+            </a>
+            <a href="unidade-urso.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-urso.png" alt="Unidade Urso">
+                </div>
+                <h3>Urso</h3>
+            </a>
+            <a href="unidade-lince.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-lince.png" alt="Unidade Lince">
+                </div>
+                <h3>Lince</h3>
+            </a>
+            <a href="unidade-panda.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-panda.png" alt="Unidade Panda">
+                </div>
+                <h3>Panda</h3>
+            </a>
+            <a href="unidade-golfinho.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-golfinho.png" alt="Unidade Golfinho">
+                </div>
+                <h3>Golfinho</h3>
+            </a>
+            <a href="unidade-coala.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-coala.png" alt="Unidade Coala">
+                </div>
+                <h3>Coala</h3>
+            </a>
+            <a href="unidade-raposa.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-raposa.png" alt="Unidade Raposa">
+                </div>
+                <h3>Raposa</h3>
+            </a>
+            <a href="unidade-pantera.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-pantera.png" alt="Unidade Pantera">
+                </div>
+                <h3>Pantera</h3>
+            </a>
+            <a href="unidade-fenix.html" class="unidade-card">
+                <div class="unidade-logo">
+                    <img src="images/unidade-fenix.png" alt="Unidade Fênix">
+                </div>
+                <h3>Fênix</h3>
+            </a>
+        </div>
+    </section>
+
+    <section id="contato" class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-info">
+                <h2>Newsletter</h2>
+                <div class="info-item">📍 Colégio Adventista do Bom Retiro - Rua Lysimaco Ferreira da Costa, 980 - Centro Cívico, Curitiba/PR</div>
+                <div class="info-item">📞 Telefone: (41) 3333-4444 / (41) 99999-8888</div>
+                <div class="info-item">⏰ Reuniões: Domingos às 9h00</div>
+                
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/LeoRanzolin" class="social-icon" aria-label="Facebook">
+                        <img src="images/facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/leoranzolindesbravadores" class="social-icon" aria-label="Instagram">
+                        <img src="images/instagram-icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@desbravadoresleoranzolin8510" class="social-icon" aria-label="YouTube">
+                        <img src="images/youtube-icon.png" alt="YouTube">
+                    </a>
+                    <a href="mailto:contato@leoranzoolin.com" class="social-icon" aria-label="Email">
+                        <img src="images/email-icon.png" alt="Email">
+                    </a>
+                </div>
+            </div>
+
+            <div class="newsletter-logo">
+                <img src="images/iasd_footer.png" alt="Igreja Adventista do Sétimo Dia" class="iasd-logo">
+            </div>
+
+            <div class="newsletter-form">
+                <h3>Newsletter</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Inscreva-se para receber nossas novidades</p>
+                <form id="newsletterForm" class="email-input">
+                    <input type="email" id="emailInput" placeholder="Seu email" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Desbravadores Léo Ranzolin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

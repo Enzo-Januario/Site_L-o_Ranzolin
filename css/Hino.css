@@ -1,0 +1,263 @@
+
+.hino-page {
+    background: #f8f9fa;
+    padding: 6rem 2rem 4rem;
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
+}
+
+.hino-container-clean {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header do Hino */
+.hino-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hino-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.hino-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #c41e3a 0%, #ffc107 100%);
+}
+
+.hino-subtitle {
+    margin-top: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.subtitle-line {
+    margin: 0.3rem 0;
+}
+
+/* Layout Principal */
+.hino-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Letra do Hino */
+.hino-letra-principal {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    line-height: 2.2;
+}
+
+.letra-linha {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.letra-linha:hover {
+    border-left-color: #c41e3a;
+    padding-left: 1.5rem;
+}
+
+.letra-espacamento {
+    height: 1.5rem;
+}
+
+/* Sidebar */
+.hino-sidebar {
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Links da Sidebar */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    margin: 0.8rem 0;
+}
+
+.sidebar-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.sidebar-links a:hover {
+    color: #c41e3a;
+    padding-left: 0.5rem;
+}
+
+/* Seção Social */
+.social-section {
+    background: linear-gradient(135deg, rgba(196, 30, 58, 0.05) 0%, rgba(255, 193, 7, 0.05) 100%);
+}
+
+.social-preview {
+    margin-bottom: 1.5rem;
+}
+
+.social-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.social-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.15);
+}
+
+.social-link-sidebar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-link-sidebar img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.social-link-sidebar span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.social-cta {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 968px) {
+    .hino-page {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .hino-header h1 {
+        font-size: 2rem;
+    }
+
+    .hino-subtitle {
+        font-size: 1rem;
+    }
+
+    .hino-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hino-letra-principal {
+        padding: 2rem;
+    }
+
+    .letra-linha {
+        font-size: 1.1rem;
+    }
+
+    .hino-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .hino-page {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .hino-header {
+        padding: 2rem 1rem;
+    }
+
+    .hino-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .hino-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hino-letra-principal {
+        padding: 1.5rem;
+    }
+
+    .letra-linha {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .sidebar-section {
+        padding: 1.5rem;
+    }
+
+    .sidebar-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .social-link-sidebar img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-link-sidebar span {
+        font-size: 0.85rem;
+    }
+}

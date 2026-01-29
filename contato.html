@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o Clube de Desbravadores Léo Ranzolin">
+    <title>Contato - Desbravadores Léo Ranzolin</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="images/logo.png" alt="Logo Léo Ranzolin" class="logo-img">
+                </div>
+                <span>Desbravadores Léo Ranzolin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Nosso Clube ▼</a>
+                    <div class="dropdown-content">
+                        <a href="quem-somos.html">Nossa História</a>
+                        <a href="hino.html">Hino do Clube</a>
+                        <a href="unidades.html">Unidades</a>
+                        <a href="index.html#calendario">Calendário</a>
+                    </div>
+                </li>
+                <li><a href="index.html#atividades">Atividades</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção do Mapa -->
+    <section class="mapa-section">
+        <div class="mapa-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.7847036671396!2d-49.27152492374567!3d-25.41089297755392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce44a5f7b5a8d%3A0x4c8b8b8b8b8b8b8b!2sR.%20Lysimaco%20Ferreira%20da%20Costa%2C%20980%20-%20Centro%20C%C3%ADvico%2C%20Curitiba%20-%20PR%2C%2080530-100!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="mapa-overlay">
+            <div class="local-badge">
+                <span class="local-icon">📍</span>
+                <span>Local das Reuniões</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contato-section">
+        <div class="contato-container">
+            
+            <!-- Formulário -->
+            <div class="contato-form-wrapper">
+                <h2>Entre em Contato</h2>
+                <p class="form-subtitle">Tem alguma dúvida ou quer saber mais sobre o clube? Envie sua mensagem!</p>
+                
+                <form id="contatoForm" class="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome *</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            <span class="input-icon">✉️</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <div class="input-wrapper">
+                            <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999">
+                            <span class="input-icon">📱</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto *</label>
+                        <div class="input-wrapper">
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="matricula">Quero matricular meu filho(a)</option>
+                                <option value="informacoes">Informações sobre o clube</option>
+                                <option value="eventos">Eventos e atividades</option>
+                                <option value="voluntario">Quero ser voluntário</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                            <span class="input-icon">📋</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">
+                        <span>Enviar Mensagem</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Informações de Contato -->
+            <div class="contato-info-wrapper">
+                <div class="info-card-contato">
+                    <div class="info-header">
+                        <div class="club-logo-small">
+                            <img src="images/logo.png" alt="Logo Léo Ranzolin">
+                        </div>
+                        <h3>Clube de Desbravadores<br>Léo Ranzolin</h3>
+                    </div>
+                    
+                    <div class="info-items">
+                        <div class="info-item-contato">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <strong>Local das Reuniões</strong>
+                                <p>Colégio Curitiba Adventista do Bom Retiro</p>
+                                <p>Rua Lysimaco Ferreira da Costa, 980</p>
+                                <p>Centro Cívico, Curitiba - PR</p>
+                                <p>CEP: 80530-100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-contato">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-text">
+                                <strong>Horário das Reuniões</strong>
+                                <p>Domingos às 9h00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-contato">
+                            <div class="info-icon">📞</div>
+                            <div class="info-text">
+                                <strong>Telefone</strong>
+                                <p>(41) 3333-4444</p>
+                                <p>(41) 99999-8888</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-contato">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-text">
+                                <strong>E-mail</strong>
+                                <p>contato@leoranzolin.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contato">
+                        <span>Siga-nos:</span>
+                        <div class="social-icons-contato">
+                            <a href="https://web.facebook.com/LeoRanzolin" class="social-btn" aria-label="Facebook">
+                                <img src="images/facebook-icon.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/leoranzolindesbravadores" class="social-btn" aria-label="Instagram">
+                                <img src="images/instagram-icon.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.youtube.com/@desbravadoresleoranzolin8510" class="social-btn" aria-label="YouTube">
+                                <img src="images/youtube-icon.png" alt="YouTube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botão para abrir no Google Maps -->
+                <a href="https://www.google.com/maps/dir//R.+Lysimaco+Ferreira+da+Costa,+980+-+Centro+C%C3%ADvico,+Curitiba+-+PR,+80530-100" 
+                   target="_blank" 
+                   class="btn-maps">
+                    <span class="maps-icon">🗺️</span>
+                    <span>Abrir no Google Maps</span>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Desbravadores Léo Ranzolin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Formulário de contato
+        document.getElementById('contatoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
