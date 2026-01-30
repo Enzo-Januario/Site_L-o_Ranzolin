@@ -339,19 +339,22 @@
     }
 
     .timeline::before {
-        left: 20px;
+        left: 30px;
     }
 
     .timeline-item {
-        flex-direction: row !important;
-        padding-left: 60px;
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 70px;
+        margin-bottom: 2rem;
     }
 
     .timeline-year {
-        flex: 0 0 auto;
         position: absolute;
         left: 0;
-        font-size: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.9rem;
         background: #c41e3a;
         border-radius: 50%;
         width: 60px;
@@ -359,10 +362,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        line-height: 1.1;
+        padding: 5px;
+        box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+        z-index: 2;
     }
 
     .timeline-content {
-        flex: 1;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
     }
 
     .missao-visao {
@@ -395,6 +412,40 @@
 
     .timeline-section {
         padding: 2rem 1rem;
+        margin: 3rem 0;
+    }
+
+    .timeline-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline::before {
+        left: 25px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-year {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 1.2rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
     .legenda-imagem {

@@ -266,41 +266,93 @@ window.addEventListener('error', (e) => {
 });
 
 // ============================================
-// MENU MOBILE (PREPARADO PARA FUTURAS MELHORIAS)
+// MENU MOBILE HAMBÚRGUER
 // ============================================
-// Quando você quiser adicionar um menu hamburguer para mobile:
-/*
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.createElement('button');
-    menuToggle.classList.add('menu-toggle');
-    menuToggle.innerHTML = '☰';
-    menuToggle.style.display = 'none';
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    // Adiciona o botão ao nav
-    const nav = document.querySelector('nav');
-    if (nav) {
-        nav.prepend(menuToggle);
+    // Toggle do menu
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            if (navOverlay) {
+                navOverlay.classList.toggle('active');
+            }
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            
+            // Fechar dropdowns quando fechar o menu
+            if (!navLinks.classList.contains('active')) {
+                dropdowns.forEach(d => d.classList.remove('active'));
+            }
+        });
     }
 
-    // Função para toggle do menu
-    menuToggle.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
+    // Fechar menu ao clicar no overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            dropdowns.forEach(d => d.classList.remove('active'));
+        });
+    }
+
+    // Dropdown no mobile - clique para abrir/fechar
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        if (dropbtn) {
+            dropbtn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Fechar outros dropdowns abertos
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle do dropdown clicado
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
     });
 
-    // Mostra o botão em telas pequenas
-    function checkMenuToggle() {
-        if (window.innerWidth <= 768) {
-            menuToggle.style.display = 'block';
-        } else {
-            menuToggle.style.display = 'none';
-        }
-    }
+    // Fechar menu ao clicar em um link (exceto dropdown)
+    navLinks.querySelectorAll('a:not(.dropbtn)').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                if (navOverlay) {
+                    navOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+                dropdowns.forEach(d => d.classList.remove('active'));
+            }
+        });
+    });
 
-    checkMenuToggle();
-    window.addEventListener('resize', checkMenuToggle);
+    // Resetar ao redimensionar
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            if (navOverlay) {
+                navOverlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+            dropdowns.forEach(d => d.classList.remove('active'));
+        }
+    });
 });
-*/
 
 // ============================================
 // PERFORMANCE - LAZY LOADING DE IMAGENS

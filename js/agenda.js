@@ -6,91 +6,91 @@
 const eventos = {
     // Formato: 'YYYY-MM-DD': [{ tipo: 'reuniao|acampamento|evento|campori', titulo: '', descricao: '', horario: '', local: '' }]
     
-    // Janeiro 2026
-    '2026-01-05': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-01-12': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-01-19': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-01-26': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Janeiro 2025
+    '2025-01-05': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-01-12': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-01-19': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-01-26': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Fevereiro 2026
-    '2026-02-02': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-02-09': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-02-14': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-02-15': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-02-16': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-02-23': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Fevereiro 2025
+    '2025-02-02': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-02-09': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-02-14': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-02-15': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-02-16': [{ tipo: 'acampamento', titulo: 'Acampamento de Verão', descricao: 'Acampamento de verão com atividades ao ar livre, trilhas e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-02-23': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Março 2026
-    '2026-03-02': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-03-09': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-03-16': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-03-21': [{ tipo: 'evento', titulo: 'Dia do Desbravador', descricao: 'Celebração especial do Dia do Desbravador com programação especial.', horario: '09:00 - 17:00', local: 'Igreja Central' }],
-    '2026-03-23': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-03-30': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Março 2025
+    '2025-03-02': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-03-09': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-03-16': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-03-21': [{ tipo: 'evento', titulo: 'Dia do Desbravador', descricao: 'Celebração especial do Dia do Desbravador com programação especial.', horario: '09:00 - 17:00', local: 'Igreja Central' }],
+    '2025-03-23': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-03-30': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Abril 2026
-    '2026-04-06': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-04-13': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-04-20': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-04-27': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Abril 2025
+    '2025-04-06': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-04-13': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-04-20': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-04-27': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Maio 2026
-    '2026-05-04': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-05-11': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' },
+    // Maio 2025
+    '2025-05-04': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-05-11': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' },
                    { tipo: 'evento', titulo: 'Homenagem às Mães', descricao: 'Programação especial em homenagem ao Dia das Mães.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-05-18': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-05-25': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-05-18': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-05-25': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Junho 2026
-    '2026-06-01': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-06-08': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-06-15': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' },
+    // Junho 2025
+    '2025-06-01': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-06-08': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-06-15': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' },
                    { tipo: 'evento', titulo: 'Homenagem aos Pais', descricao: 'Programação especial em homenagem ao Dia dos Pais.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-06-22': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-06-29': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-06-22': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-06-29': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Julho 2026
-    '2026-07-06': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-07-11': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-07-12': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-07-13': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
-    '2026-07-20': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-07-27': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Julho 2025
+    '2025-07-06': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-07-11': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-07-12': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-07-13': [{ tipo: 'acampamento', titulo: 'Acampamento de Inverno', descricao: 'Acampamento de inverno com fogueira, histórias e especialidades.', horario: 'Sexta a Domingo', local: 'A definir' }],
+    '2025-07-20': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-07-27': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Agosto 2026
-    '2026-08-03': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-08-10': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-08-17': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-08-24': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-08-31': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Agosto 2025
+    '2025-08-03': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-08-10': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-08-17': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-08-24': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-08-31': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Setembro 2026
-    '2026-09-07': [{ tipo: 'evento', titulo: 'Desfile de 7 de Setembro', descricao: 'Participação no desfile cívico de 7 de Setembro.', horario: '08:00 - 12:00', local: 'Centro de Curitiba' }],
-    '2026-09-14': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-09-21': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-09-28': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Setembro 2025
+    '2025-09-07': [{ tipo: 'evento', titulo: 'Desfile de 7 de Setembro', descricao: 'Participação no desfile cívico de 7 de Setembro.', horario: '08:00 - 12:00', local: 'Centro de Curitiba' }],
+    '2025-09-14': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-09-21': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-09-28': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Outubro 2026
-    '2026-10-05': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-10-11': [{ tipo: 'acampamento', titulo: 'Acampamento de Conselheiros', descricao: 'Acampamento para desbravadores que serão conselheiros.', horario: 'Sábado e Domingo', local: 'A definir' }],
-    '2026-10-12': [{ tipo: 'acampamento', titulo: 'Acampamento de Conselheiros', descricao: 'Acampamento para desbravadores que serão conselheiros.', horario: 'Sábado e Domingo', local: 'A definir' }],
-    '2026-10-19': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-10-25': [{ tipo: 'evento', titulo: 'Entrega de Classes', descricao: 'Cerimônia de entrega de classes e especialidades.', horario: '19:00 - 21:00', local: 'Igreja Central' }],
-    '2026-10-26': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Outubro 2025
+    '2025-10-05': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-10-11': [{ tipo: 'acampamento', titulo: 'Acampamento de Conselheiros', descricao: 'Acampamento para desbravadores que serão conselheiros.', horario: 'Sábado e Domingo', local: 'A definir' }],
+    '2025-10-12': [{ tipo: 'acampamento', titulo: 'Acampamento de Conselheiros', descricao: 'Acampamento para desbravadores que serão conselheiros.', horario: 'Sábado e Domingo', local: 'A definir' }],
+    '2025-10-19': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-10-25': [{ tipo: 'evento', titulo: 'Entrega de Classes', descricao: 'Cerimônia de entrega de classes e especialidades.', horario: '19:00 - 21:00', local: 'Igreja Central' }],
+    '2025-10-26': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Novembro 2026
-    '2026-11-02': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-11-09': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-11-16': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-11-20': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
-    '2026-11-21': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
-    '2026-11-22': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
-    '2026-11-23': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
-    '2026-11-30': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Novembro 2025
+    '2025-11-02': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-11-09': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-11-16': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-11-20': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
+    '2025-11-21': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
+    '2025-11-22': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
+    '2025-11-23': [{ tipo: 'campori', titulo: 'Campori Valentes', descricao: 'Campori da ASP com o tema Valentes.', horario: 'Quinta a Domingo', local: 'A definir' }],
+    '2025-11-30': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
     
-    // Dezembro 2026
-    '2026-12-07': [{ tipo: 'reuniao', titulo: 'Reunião Normal', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
-    '2026-12-14': [{ tipo: 'evento', titulo: 'Confraternização de Fim de Ano', descricao: 'Festa de encerramento do ano com amigo secreto e atividades.', horario: '09:00 - 14:00', local: 'Colégio Adventista do Bom Retiro' }],
+    // Dezembro 2025
+    '2025-12-07': [{ tipo: 'reuniao', titulo: 'Reunião Dominical', descricao: 'Reunião regular do clube com atividades e especialidades.', horario: '09:00 - 12:00', local: 'Colégio Adventista do Bom Retiro' }],
+    '2025-12-14': [{ tipo: 'evento', titulo: 'Confraternização de Fim de Ano', descricao: 'Festa de encerramento do ano com amigo secreto e atividades.', horario: '09:00 - 14:00', local: 'Colégio Adventista do Bom Retiro' }],
 };
 
 // Variáveis globais

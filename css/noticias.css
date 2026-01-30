@@ -1,3 +1,8 @@
+/* ============================================
+   CSS ESPECÍFICO DA PÁGINA DE NOTÍCIAS
+   ============================================ */
+
+/* Banner da página */
 .noticias-banner {
     position: relative;
     height: 300px;

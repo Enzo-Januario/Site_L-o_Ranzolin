@@ -99,6 +99,22 @@ nav {
     gap: 0.3rem;
 }
 
+.dropbtn::after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.3rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.dropdown:hover .dropbtn::after,
+.dropdown.active .dropbtn::after {
+    transform: rotate(-135deg);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -658,6 +674,9 @@ nav {
     transition: all 0.3s;
     box-shadow: 0 3px 15px rgba(0,0,0,0.08);
     border: 2px solid transparent;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .unidade-card:hover {
@@ -1003,5 +1022,127 @@ footer {
     .destaques-section h2,
     .unidades-section h2 {
         font-size: 2rem;
+    }
+}
+
+/* ============================================
+   MENU HAMBÚRGUER MOBILE
+   ============================================ */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(180deg, #c41e3a 0%, #a01830 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 2rem 2rem;
+        gap: 0;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 100%;
+        margin-top: 0;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.8rem 1rem;
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding-left: 1.5rem;
+    }
+
+    .logo span {
+        font-size: 0.9rem;
+    }
+
+    /* Overlay quando menu está aberto */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        display: block;
     }
 }
