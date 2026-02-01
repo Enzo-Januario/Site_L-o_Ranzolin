@@ -97,6 +97,8 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    color: white !important;
+    border-bottom: none !important;
 }
 
 .dropbtn::after {

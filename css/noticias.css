@@ -183,19 +183,16 @@
 }
 
 /* Link ativo no menu */
-.nav-links a.active:not(.dropbtn) {
-    position: relative;
+.nav-links > li > a.active:not(.dropbtn) {
     color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 3px;
 }
 
-.nav-links a.active:not(.dropbtn)::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #ffc107;
+/* Garantir que dropbtn nunca fique amarelo */
+.nav-links .dropbtn {
+    color: white !important;
+    border-bottom: none !important;
 }
 
 /* ============================================
