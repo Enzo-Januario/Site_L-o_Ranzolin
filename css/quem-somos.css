@@ -312,7 +312,7 @@
    LINK ATIVO NO MENU
    ============================================ */
 
-.nav-links a.active {
+.nav-links a.active:not(.dropbtn) {
     opacity: 1;
     border-bottom: 2px solid #ffc107;
 }

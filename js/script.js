@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.dropbtn)');
     
     let current = '';
     

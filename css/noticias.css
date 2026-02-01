@@ -183,12 +183,12 @@
 }
 
 /* Link ativo no menu */
-.nav-links a.active {
+.nav-links a.active:not(.dropbtn) {
     position: relative;
     color: #ffc107;
 }
 
-.nav-links a.active::after {
+.nav-links a.active:not(.dropbtn)::after {
     content: '';
     position: absolute;
     bottom: -5px;
