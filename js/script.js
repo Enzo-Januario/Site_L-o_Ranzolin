@@ -192,22 +192,27 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a:not(.dropbtn)');
+    
+    // Só funciona na página inicial (que tem sections com id e links #)
+    if (sections.length === 0) return;
+    
+    // Só manipula links com href começando em # (âncoras internas)
+    const anchorLinks = document.querySelectorAll('.nav-links a[href^="#"]:not(.dropbtn)');
+    if (anchorLinks.length === 0) return;
     
     let current = '';
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         
         if (window.pageYOffset >= (sectionTop - 100)) {
             current = section.getAttribute('id');
         }
     });
     
-    navLinks.forEach(link => {
+    anchorLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        if (current && link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }
     });

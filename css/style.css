@@ -103,11 +103,12 @@ nav {
     content: '';
     display: inline-block;
     margin-left: 0.3rem;
-    border: solid white;
-    border-width: 0 2px 2px 0;
+    border: solid white !important;
+    border-width: 0 2px 2px 0 !important;
     padding: 3px;
     transform: rotate(45deg);
     transition: transform 0.3s;
+    background: none !important;
 }
 
 .dropdown:hover .dropbtn::after,
