@@ -117,6 +117,9 @@
                         <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
                     </div>
                     
+                    <!-- Honeypot anti-spam: invisível para pessoas, bots costumam marcar -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
+
                     <button type="submit" class="btn-enviar">
                         <span>Enviar Mensagem</span>
                         <span class="btn-icon">→</span>
@@ -206,12 +209,42 @@
 
     <script src="js/script.js"></script>
 <script>
-    document.getElementById('contatoForm').addEventListener('submit', async function(e) {
+    // =====================================================================
+    // Envio do formulário via Web3Forms (funciona em site estático,
+    // ex.: GitHub Pages, sem precisar de servidor Node).
+    // Crie sua chave em https://web3forms.com e cole abaixo.
+    // A chave pode ficar pública: ela só permite ENVIAR para o seu e-mail.
+    // =====================================================================
+    const WEB3FORMS_ACCESS_KEY = 'a66619dd-97ea-4fd2-a976-afd0aec7428a';
+
+    const ASSUNTOS = {
+        matricula: 'Quero matricular meu filho(a)',
+        informacoes: 'Informações sobre o clube',
+        eventos: 'Eventos e atividades',
+        voluntario: 'Quero ser voluntário',
+        outro: 'Outro assunto',
+    };
+
+    document.getElementById('contatoForm').addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const btn = this.querySelector('.btn-enviar');
+        const form = this;
+        const btn = form.querySelector('.btn-enviar');
         const btnText = btn.querySelector('span');
         const textoOriginal = btnText.textContent;
+
+        const dados = {
+            nome: form.nome.value.trim(),
+            email: form.email.value.trim(),
+            telefone: form.telefone.value.trim(),
+            assunto: form.assunto.value,
+            mensagem: form.mensagem.value.trim(),
+        };
+
+        if (!dados.nome || !dados.email || !dados.assunto || !dados.mensagem) {
+            mostrarNotificacao('⚠️ Preencha todos os campos obrigatórios.', 'erro');
+            return;
+        }
 
         // Estado de loading
         btn.disabled = true;
@@ -219,37 +252,49 @@
         btn.style.opacity = '0.7';
         btn.style.cursor = 'wait';
 
-        // Coletar dados do formulário
-        const dados = {
-            nome: document.getElementById('nome').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            telefone: document.getElementById('telefone').value.trim(),
-            assunto: document.getElementById('assunto').value,
-            mensagem: document.getElementById('mensagem').value.trim(),
+        const assuntoTexto = ASSUNTOS[dados.assunto] || dados.assunto;
+
+        const payload = {
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `[Contato Site] ${assuntoTexto} - ${dados.nome}`,
+            from_name: 'Site Léo Ranzolin',
+            botcheck: form.botcheck.checked, // honeypot anti-spam
+            // "email" vira automaticamente o Reply-To da mensagem
+            Nome: dados.nome,
+            email: dados.email,
+            Telefone: dados.telefone || 'Não informado',
+            Assunto: assuntoTexto,
+            Mensagem: dados.mensagem,
         };
 
         try {
-            const response = await fetch('/api/contato', {
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dados),
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(payload),
             });
 
-            const result = await response.json();
+            let result;
+            try {
+                result = await response.json();
+            } catch {
+                throw new Error(`Resposta inválida do servidor (HTTP ${response.status})`);
+            }
 
-            if (result.success) {
-                // Sucesso
+            if (response.ok && result.success) {
                 mostrarNotificacao('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.', 'sucesso');
-                this.reset();
+                form.reset();
             } else {
-                // Erro de validação
-                mostrarNotificacao('⚠️ ' + result.message, 'erro');
+                console.error('Falha no envio:', result);
+                mostrarNotificacao('⚠️ Não foi possível enviar a mensagem. Tente novamente mais tarde.', 'erro');
             }
         } catch (error) {
-            // Erro de conexão
+            console.error('Erro no envio:', error);
             mostrarNotificacao('❌ Erro de conexão. Verifique sua internet e tente novamente.', 'erro');
         } finally {
-            // Restaurar botão
             btn.disabled = false;
             btnText.textContent = textoOriginal;
             btn.style.opacity = '1';
@@ -258,18 +303,29 @@
     });
 
     function mostrarNotificacao(texto, tipo) {
-        // Remove notificação anterior se existir
         const existente = document.querySelector('.notificacao');
         if (existente) existente.remove();
 
         const div = document.createElement('div');
         div.className = `notificacao notificacao-${tipo}`;
-        div.innerHTML = `
-            <span>${texto}</span>
-            <button onclick="this.parentElement.remove()" style="background:none;border:none;color:inherit;font-size:18px;cursor:pointer;margin-left:10px;">✕</button>
-        `;
+        div.setAttribute('role', tipo === 'erro' ? 'alert' : 'status');
 
-        // Estilos inline da notificação
+        // textContent em vez de innerHTML: evita injeção de HTML
+        const span = document.createElement('span');
+        span.textContent = texto;
+
+        const fechar = document.createElement('button');
+        fechar.type = 'button';
+        fechar.textContent = '✕';
+        fechar.setAttribute('aria-label', 'Fechar notificação');
+        Object.assign(fechar.style, {
+            background: 'none', border: 'none', color: 'inherit',
+            fontSize: '18px', cursor: 'pointer', marginLeft: '10px',
+        });
+        fechar.addEventListener('click', () => div.remove());
+
+        div.append(span, fechar);
+
         Object.assign(div.style, {
             position: 'fixed',
             top: '20px',
@@ -292,7 +348,6 @@
 
         document.body.appendChild(div);
 
-        // Remover após 5 segundos
         setTimeout(() => {
             if (div.parentElement) {
                 div.style.opacity = '0';
